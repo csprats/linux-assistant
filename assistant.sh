@@ -28,7 +28,7 @@ function assist()
 		"node")
 			echo "OK, what archive?";
 			read archive
-			node $archive.js
+			node $archive
 			assist
 		;;
 		*)
