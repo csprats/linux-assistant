@@ -8,13 +8,15 @@ function assist()
 		"open")
 			echo "OK, what archive?"
 			read archive
-			./$archive.sh
+			nano $archive
 		;;
 
 		"date")
-			echo "OK, what date?"
-			read date
-			sudo date --set="2025-$date 5:20:00"
+			echo "OK, what month?"
+			read month
+			echo "An what day?"
+			read day
+			sudo date --set="2025-$month-$day 5:20:00"
 			assist
 		;;
 		"search")
