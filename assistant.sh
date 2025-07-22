@@ -14,7 +14,7 @@ function assist()
 		"date")
 			echo "OK, what month?"
 			read month
-			echo "An what day?"
+			echo "And what day?"
 			read day
 			sudo date --set="2025-$month-$day 5:20:00"
 			assist
