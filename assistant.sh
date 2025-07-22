@@ -25,14 +25,6 @@ function assist()
 			xdg-open "https://www.google.com/search?q=$search"
 			assist
 		;;
-		"launch")
-			cd web
-			cd backend-server
-			npm run start
-			cd ..
-			cd ..
-			assist
-		;;
 		"node")
 			echo "OK, what archive?";
 			read archive
