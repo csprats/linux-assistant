@@ -32,7 +32,25 @@ function assist()
 			assist
 		;;
 		"git")
-			echo "OK, but this is a new funcion";
+			echo "OK, please enter the directory";
+			read d
+			cd $d
+			echo "Do you want to initialice a proyect? y = yes n = no";
+			read yn
+			case $yn in
+				"y")
+					  echo "OK, yes"
+					  git init
+				;;
+				"n")
+					  echo "OK, no"
+				;;
+				*)
+					  echo "Invalid anwser"
+					  assist
+				;;
+			esac
+		;;
 		*)
 			echo "Comand not found, $anwser"
 			assist
