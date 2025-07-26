@@ -31,6 +31,8 @@ function assist()
 			node $archive
 			assist
 		;;
+		"git")
+			echo "OK, but this is a new funcion";
 		*)
 			echo "Comand not found, $anwser"
 			assist
