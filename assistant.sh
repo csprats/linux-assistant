@@ -3,7 +3,7 @@
 function gitFunctions()
 {
 	read anwser
-	
+	echo ""
 	case $anwser in
 		
 		"pull")
@@ -51,7 +51,7 @@ function gitFunctions()
 function assist()
 {
 	read anwser
-
+	echo ""
 		case $anwser in
 		"open")
 			echo "OK, what archive?"
@@ -86,6 +86,7 @@ function assist()
 		"git")
 			echo "OK, please enter the directory"
 			read d
+			echo ""
 			cd $d
 			echo "OK, showing contents"
 			echo ""
