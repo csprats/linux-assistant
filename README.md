@@ -11,11 +11,13 @@ To start using this assistant, you must launch it in the Linux console. Once you
 - date: change the date.
 - search: open the explorer and search whit google.
 - node: open archives whit node.
+- comands: see all comands
 - git: git functions: 
--   - pull
--   - push
--   - add
--   - comment
--   - exit
+-   - pull: git pull
+-   - push: git push
+-   - add: git add
+-   - comment: git commit -m 
+-   - comands: see all comands
+-   - exit: exit git mode
 
 Over time I will add more commands.

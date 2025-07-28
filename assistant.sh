@@ -32,9 +32,17 @@ function gitFunctions()
 			echo "Comment added"
 			gitFunctions
 		;;
+		"comands")
+			cat ./comands.txt
+			gitFunctions
+		;;
 		"exit")
 			echo "OK, exit git functions"
 			assist
+		;;
+		*)
+			echo "Git comand not found, $anwser"
+			gitFunctions
 		;;
 		
 	esac
@@ -71,21 +79,30 @@ function assist()
 			node $archive
 			assist
 		;;
+		"comands")
+			cat ./comands.txt
+			assist
+		;;
 		"git")
 			echo "OK, please enter the directory"
 			read d
 			cd $d
+			echo "OK, showing contents"
+			echo ""
 			ls
+			echo ""
 			echo "Do you want to initialice a proyect? y = yes n = no"
 			read yn
 			case $yn in
 				"y")
 					  echo "OK, yes"
+					  echo "Enter git function"
 					  git init
 					  gitFunctions
 				;;
 				"n")
 					  echo "OK, no"
+					  echo "Enter git comand"
 					  gitFunctions
 				;;
 				*)
@@ -96,6 +113,8 @@ function assist()
 		;;
 		*)
 			echo "Comand not found, $anwser"
+			echo "Showing all comands..."
+			cat ./comands.txt
 			assist
 		;;
 	esac

@@ -1,0 +1,10 @@
+- open: open archives with nano.
+- date: change the date.
+- search: open the explorer and search whit google.
+- node: open archives whit node.
+- git: git functions: 
+-   pull: git pull
+-   push: git push
+-   add: git add
+-   comment: git commit -m 
+-   exit: exit git mode
