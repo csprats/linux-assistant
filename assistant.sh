@@ -1,5 +1,44 @@
 #!/bin/bash
 
+function gitFunctions()
+{
+	read anwser
+	
+	case $anwser in
+		
+		"pull")
+			echo "OK, pulling..."
+			git pull
+			echo "OK, pulled"
+			gitFunctions
+		;;
+		"push")
+			echo "OK, pushing..."
+			git push
+			echo "OK, pushed"
+			gitFunctions
+		;;
+		"add")
+			echo "OK, what do you want to add?"
+			read archive
+			git add $archive
+			echo "OK, added"
+			gitFunctions
+		;;
+		"comment")
+			echo "OK, what's the comment?"
+			read comment
+			git commit -m "$comment"
+			gitFunctions
+		;;
+		"exit")
+			echo "OK, exit git functions"
+			assist
+		;;
+		
+	esac
+}
+
 function assist()
 {
 	read anwser
@@ -32,18 +71,21 @@ function assist()
 			assist
 		;;
 		"git")
-			echo "OK, please enter the directory";
+			echo "OK, please enter the directory"
 			read d
 			cd $d
-			echo "Do you want to initialice a proyect? y = yes n = no";
+			ls
+			echo "Do you want to initialice a proyect? y = yes n = no"
 			read yn
 			case $yn in
 				"y")
 					  echo "OK, yes"
 					  git init
+					  gitFunctions
 				;;
 				"n")
 					  echo "OK, no"
+					  gitFunctions
 				;;
 				*)
 					  echo "Invalid anwser"
