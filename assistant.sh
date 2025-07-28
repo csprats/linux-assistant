@@ -29,6 +29,7 @@ function gitFunctions()
 			echo "OK, what's the comment?"
 			read comment
 			git commit -m "$comment"
+			echo "Comment added"
 			gitFunctions
 		;;
 		"exit")

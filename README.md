@@ -11,5 +11,11 @@ To start using this assistant, you must launch it in the Linux console. Once you
 * date: change the date.
 * search: open the explorer and search whit google.
 * node: open archives whit node.
+* git: git functions: 
+* - pull
+* - push
+* - add
+* - comment
+* - exit
 
 Over time I will add more commands.
