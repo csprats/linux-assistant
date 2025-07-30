@@ -97,8 +97,8 @@ function assist()
 			case $yn in
 				"y")
 					  echo "OK, yes"
-					  echo "Enter git function"
 					  git init
+					  echo "Enter git function"
 					  gitFunctions
 				;;
 				"n")
